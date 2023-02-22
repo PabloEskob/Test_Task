@@ -18,7 +18,6 @@ public class ActorUi : MonoBehaviour
         _oilPump.GotOil += _gameResources.SetOil;
         _openInfographicPanelButton.Clicked += EnterInfographicPanel;
         _upgradePanel.Changed += _gameResources.RemoveMoney;
-        _infographicPanel.ButtonSellOil.Clicked += GameResources.RemoveOil;
     }
 
     private void OnDisable()
@@ -26,11 +25,14 @@ public class ActorUi : MonoBehaviour
         _oilPump.GotOil -= _gameResources.SetOil;
         _openInfographicPanelButton.Clicked -= EnterInfographicPanel;
         _upgradePanel.Changed += _gameResources.RemoveMoney;
-        _infographicPanel.ButtonSellOil.Clicked -= GameResources.RemoveOil;
+        _infographicPanel.ButtonSellOil.Clicked -= _gameResources.RemoveOil;
     }
 
-    private void Start() => 
-        _uiStateMachine = new UiStateMachine(_infographicPanel,_upgradePanel,_oilPump);
+    private void Start()
+    {
+        _infographicPanel.ButtonSellOil.Clicked += _gameResources.RemoveOil;
+        _uiStateMachine = new UiStateMachine(_infographicPanel, _upgradePanel, _oilPump);
+    }
 
     private void EnterInfographicPanel() => 
         _uiStateMachine.Enter<InfographicPanelState>();

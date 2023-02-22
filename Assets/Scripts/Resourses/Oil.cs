@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class Oil : MonoBehaviour, IResources
@@ -9,9 +8,7 @@ public class Oil : MonoBehaviour, IResources
     private TextMeshProUGUI _textMeshProUGUI;
 
     public float Count { get; set; }
-
-    public event Action<float> Changed;
-
+    
     private void Awake()
     {
         _textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
@@ -38,6 +35,5 @@ public class Oil : MonoBehaviour, IResources
     public void Show()
     {
         _textMeshProUGUI.text = Count.ToString();
-        Changed?.Invoke(Count);
     }
 }
