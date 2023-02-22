@@ -10,17 +10,7 @@ public class GameResources : MonoBehaviour
 
     public Money Money => _money;
     public Oil Oil => _oil;
-
-    private void OnEnable()
-    {
-        _oil.Changed += _oilPrice.SetText;
-    }
-
-    private void OnDisable()
-    {
-        _oil.Changed-=_oilPrice.SetText;
-    }
-
+    
     private void Awake()
     {
         _money = GetComponentInChildren<Money>();
