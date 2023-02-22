@@ -2,6 +2,6 @@
 {
     public int Count { get; set; }
 
-    public void Add(int value);
-    public void Show();
+    void Add(int value);
+    void Show();
 }
