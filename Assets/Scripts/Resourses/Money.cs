@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Money : MonoBehaviour, IResources
 {
-    [SerializeField] private int _initialCount;
+    [SerializeField] private float _initialCount;
 
     private TextMeshProUGUI _textMeshProUGUI;
     
-    public int Count { get; set; }
+    public float Count { get; set; }
 
     private void Awake() => 
         _textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
@@ -18,13 +18,13 @@ public class Money : MonoBehaviour, IResources
         Show();
     }
 
-    public void Add(int value)
+    public void Add(float value)
     {
         Count += value;
         Show();
     }
 
-    public void Remove(int value)
+    public void Remove(float value)
     {
         Count -= value;
         Show();

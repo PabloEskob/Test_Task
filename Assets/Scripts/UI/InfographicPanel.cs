@@ -5,7 +5,6 @@ public class InfographicPanel : MonoBehaviour
     [SerializeField] private OpenInfographicPanelButton _openInfographicPanelButton;
 
     private CanvasGroup _canvasGroup;
-    
     public ClosePanelButton ClosePanelButton { get; private set; }
     public ButtonSellOil ButtonSellOil { get; private set; }
 
