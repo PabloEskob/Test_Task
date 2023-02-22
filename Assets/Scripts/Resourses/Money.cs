@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Money : MonoBehaviour, IResourses
+public class Money : MonoBehaviour, IResources
 {
     [SerializeField] private int _initialCount;
 
@@ -9,10 +9,8 @@ public class Money : MonoBehaviour, IResourses
     
     public int Count { get; set; }
 
-    private void Awake()
-    {
+    private void Awake() => 
         _textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
-    }
 
     private void Start()
     {
@@ -32,8 +30,6 @@ public class Money : MonoBehaviour, IResourses
         Show();
     }
 
-    public void Show()
-    {
+    public void Show() => 
         _textMeshProUGUI.text = Count.ToString();
-    }
 }
