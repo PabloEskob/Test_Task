@@ -1,4 +1,4 @@
-﻿public interface IResourses
+﻿public interface IResources
 {
     public int Count { get; set; }
 

@@ -5,12 +5,15 @@ public class InfographicPanel : MonoBehaviour
     [SerializeField] private OpenInfographicPanelButton _openInfographicPanelButton;
 
     private CanvasGroup _canvasGroup;
-    public ClosePanelButton ClosePanelButton { get; set; }
+    
+    public ClosePanelButton ClosePanelButton { get; private set; }
+    public ButtonSellOil ButtonSellOil { get; private set; }
 
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
         ClosePanelButton = GetComponentInChildren<ClosePanelButton>();
+        ButtonSellOil = GetComponentInChildren<ButtonSellOil>();
     }
 
     public void Activate()
