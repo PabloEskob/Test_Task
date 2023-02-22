@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CloseUpgradePanelButton: MonoBehaviour,IPointerClickHandler
+public class ClosePanelButton: MonoBehaviour,IPointerClickHandler
 {
     public event Action Clicked;
     
