@@ -1,8 +1,8 @@
 ﻿public interface IResources
 {
-    public int Count { get; set; }
+    public float Count { get; set; }
 
-    void Add(int value);
-    void Remove(int value);
+    void Add(float value);
+    void Remove(float value);
     void Show();
 }

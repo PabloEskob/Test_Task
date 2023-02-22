@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class Oil : MonoBehaviour, IResources
@@ -6,27 +7,29 @@ public class Oil : MonoBehaviour, IResources
     [SerializeField] private int _initialCount;
 
     private TextMeshProUGUI _textMeshProUGUI;
-    
-    public int Count { get; set; }
+
+    public float Count { get; set; }
+
+    public event Action<float> Changed;
 
     private void Awake()
     {
         _textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
+        Count = _initialCount;
     }
 
     private void Start()
     {
-        Count = _initialCount;
         Show();
     }
 
-    public void Add(int value)
+    public void Add(float value)
     {
         Count += value;
         Show();
     }
 
-    public void Remove(int value)
+    public void Remove(float value)
     {
         Count -= value;
         Show();
@@ -35,5 +38,6 @@ public class Oil : MonoBehaviour, IResources
     public void Show()
     {
         _textMeshProUGUI.text = Count.ToString();
+        Changed?.Invoke(Count);
     }
 }
