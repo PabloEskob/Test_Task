@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class UpgradePanelState : IState
 {
     private readonly UpgradePanel _upgradePanel;

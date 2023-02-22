@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 466277041}
   - component: {fileID: 466277040}
   - component: {fileID: 466277039}
+  - component: {fileID: 466277042}
   m_Layer: 5
   m_Name: Button_upgrade
   m_TagString: Untagged
@@ -494,7 +495,7 @@ RectTransform:
   m_Children:
   - {fileID: 60890815}
   m_Father: {fileID: 1244316904}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -583,6 +584,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466277037}
   m_CullTransparentMesh: 1
+--- !u!114 &466277042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466277037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6880970e1a947e596f66f2dbf400977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &604972237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upgradePanel: {fileID: 1244316908}
   _oilPump: {fileID: 1708393929}
-  _oil: {fileID: 604972241}
+  _gameResources: {fileID: 1636331231}
   _infographicPanel: {fileID: 2033307410}
   _openInfographicPanelButton: {fileID: 751049143}
 --- !u!1 &852518726
@@ -1727,6 +1740,7 @@ GameObject:
   - component: {fileID: 1219571717}
   - component: {fileID: 1219571719}
   - component: {fileID: 1219571718}
+  - component: {fileID: 1219571720}
   m_Layer: 5
   m_Name: Money_panel
   m_TagString: Untagged
@@ -1794,6 +1808,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219571716}
   m_CullTransparentMesh: 1
+--- !u!114 &1219571720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219571716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bc512f53f25b04c89186b860c96f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialCount: 5000
 --- !u!1 &1244316903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,9 +1853,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1815581049}
   - {fileID: 2115915258}
   - {fileID: 466277038}
+  - {fileID: 1815581049}
   m_Father: {fileID: 2001195932}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1899,6 +1926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cba250b7de4e7e49a5256676f229319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textMeshProUGUI: {fileID: 852518728}
 --- !u!1 &1500584158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,8 +2149,9 @@ GameObject:
   - component: {fileID: 1636331228}
   - component: {fileID: 1636331230}
   - component: {fileID: 1636331229}
+  - component: {fileID: 1636331231}
   m_Layer: 5
-  m_Name: Resource_panel
+  m_Name: Resources_panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2188,6 +2217,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636331227}
   m_CullTransparentMesh: 1
+--- !u!114 &1636331231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636331227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782c2d578347f6c45974d49153ed3661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708393926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,7 +2533,7 @@ RectTransform:
   m_Children:
   - {fileID: 1804781499}
   m_Father: {fileID: 1244316904}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2809,7 +2850,7 @@ RectTransform:
   m_Children:
   - {fileID: 852518727}
   m_Father: {fileID: 1244316904}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2830,9 +2871,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.025809899, g: 0.18867922, b: 0.025809899, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
