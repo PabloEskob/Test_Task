@@ -3,17 +3,13 @@ using UnityEngine;
 public class UpgradePanel : MonoBehaviour
 {
     private CanvasGroup _canvasGroup;
-    private ClosePanelButton _closePanelButton;
 
-    private void OnEnable()
-    {
-        _closePanelButton.Clicked += Deactivate;
-    }
-
+    public ClosePanelButton ClosePanelButton { private set; get;}
+    
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        _closePanelButton = GetComponentInChildren<ClosePanelButton>();
+        ClosePanelButton = GetComponentInChildren<ClosePanelButton>();
     }
 
     public void SetActive()
@@ -22,10 +18,9 @@ public class UpgradePanel : MonoBehaviour
         _canvasGroup.blocksRaycasts = true;
     }
 
-    private void Deactivate()
+    public void Deactivate()
     {
         _canvasGroup.alpha = 0;
         _canvasGroup.blocksRaycasts = false;
-        _closePanelButton.Clicked -= SetActive;
     }
 }

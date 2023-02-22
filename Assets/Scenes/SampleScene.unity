@@ -1131,6 +1131,8 @@ MonoBehaviour:
   _upgradePanel: {fileID: 1244316908}
   _oilPump: {fileID: 1708393929}
   _oil: {fileID: 604972241}
+  _infographicPanel: {fileID: 2033307410}
+  _openInfographicPanelButton: {fileID: 751049143}
 --- !u!1 &852518726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77397e78e0420dd4bbce5a4c5807e1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openPanelButton: {fileID: 751049143}
+  _openInfographicPanelButton: {fileID: 751049143}
 --- !u!1 &2115915257
 GameObject:
   m_ObjectHideFlags: 0

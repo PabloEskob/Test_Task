@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class OpenPanelButton : MonoBehaviour,IPointerClickHandler
+public class OpenInfographicPanelButton : MonoBehaviour,IPointerClickHandler
 {
     private CanvasGroup _canvasGroup;
 
