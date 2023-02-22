@@ -1,7 +1,7 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 
-public class Oil : MonoBehaviour, IResourses
+public class Money : MonoBehaviour, IResourses
 {
     [SerializeField] private int _initialCount;
 
